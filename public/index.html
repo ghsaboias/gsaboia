@@ -332,52 +332,60 @@
         </li>
       </ul>
     </div>
-    <h2>Skills Graph</h2>
+<h2>Skills Graph</h2>
 <div class="mermaid">
-  graph TD
+  graph TB
     Me[Guilherme Saboia]
-    Me --> FS[Full Stack]
-    Me --> AI[AI Engineer]
-    Me --> Auto[Automation]
-    Me --> BC[Blockchain]
-    Me --> Proj[Projects]
-    Me --> Tools[Collaboration & Tools]
-    Me --> Edu[Education]
-    Me --> Langs[Languages]
 
-    FS --> FE[Frontend: React, TypeScript, Next.js]
-    FS --> BE[Backend: Node.js, SQL, APIs]
-    FS --> DevOps[Cloudflare Workers, GitHub Actions]
+    Me --> Role1[Full Stack Engineer]
+    Me --> Role2[AI Engineer]
+    Me --> Role3[Automation Specialist]
+    Me --> Role4[Blockchain Developer]
+    Me --> Role5[Project Portfolio]
+    Me --> Role6[Education & Learning]
+    Me --> Role7[Languages]
 
-    AI --> ToolsAI[LLM Tools: LangChain, CrewAI]
-    AI --> Infra[AI Infra: MCP, Agents]
-    AI --> ML[ML: PyTorch, Optimization]
+    %% Full Stack Details
+    Role1 --> FE[Frontend: React, TypeScript, Next.js]
+    Role1 --> BE[Backend: Node.js, SQL, GraphQL, REST]
+    Role1 --> DevOps[DevOps: Cloudflare Workers, GitHub Actions]
 
-    Auto --> Puppeteer
-    Auto --> n8n
+    %% AI Engineer Details
+    Role2 --> AITools[LLM Tools: LangChain, CrewAI, OpenRouter]
+    Role2 --> AIPipelines[AI Infra: MCP, Multi-agent Systems]
+    Role2 --> AIML[ML: PyTorch, Neural Networks, Optimization]
 
-    BC --> Web3[Web3.js]
-    BC --> DeFi[Smart Contracts, Arbitrum]
+    %% Automation Details
+    Role3 --> Automate1[n8n, Puppeteer, Cron Jobs]
+    Role3 --> Automate2[System Integration & Workflow Design]
 
-    Proj --> News[news.fasttakeoff.org]
-    Proj --> Transcriber[Video Transcriber]
-    Proj --> SnakeAI[Snake AI]
-    Proj --> Prompt[Prompt Caching]
-    Proj --> CS50[CS50 AI Projects]
+    %% Blockchain Details
+    Role4 --> Chain1[Web3.js, Smart Contracts]
+    Role4 --> Chain2[DeFi: Arbitrum, Trading Interfaces]
 
-    Tools --> Git
-    Tools --> Figma
-    Tools --> ClickUp
+    %% Project Highlights
+    Role5 --> NewsSite[news.fasttakeoff.org]
+    Role5 --> Transcriber[Video Transcriber]
+    Role5 --> PromptCache[Prompt Caching]
+    Role5 --> SnakeAI[Snake AI Game Logic]
+    Role5 --> CS50Projects[CS50 AI Research]
 
-    Edu --> USP[USP Economics]
-    Edu --> Trybe[Trybe Full Stack]
-    Edu --> CS50[Harvard CS50 AI]
-    Edu --> Stanford[Stanford ML]
+    %% Education
+    Role6 --> USP[USP - Economics]
+    Role6 --> Trybe[Trybe - Full Stack Dev]
+    Role6 --> CS50[Harvard CS50 AI]
+    Role6 --> Stanford[Stanford ML (Coursera)]
 
-    Langs --> PT[Portuguese]
-    Langs --> EN[English]
-    Langs --> ES[Spanish]
-    Langs --> IT[Italian]
+    %% Languages
+    Role7 --> PT[Portuguese (Native)]
+    Role7 --> EN[English (Fluent)]
+    Role7 --> ES[Spanish (Intermediate)]
+    Role7 --> IT[Italian (Intermediate)]
+
+    %% Clickable Projects
+    click NewsSite href "https://news.fasttakeoff.org" _blank
+    click Transcriber href "https://github.com/ghsaboias/video-transcriber" _blank
+    click CS50Projects href "https://github.com/ghsaboias/ai-research" _blank
 </div>
   </body>
 </html>
