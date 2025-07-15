@@ -6,6 +6,10 @@
     <title>Guilherme Saboia - CV</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
   </head>
   <body>
     <div class="cv-container">
@@ -328,5 +332,52 @@
         </li>
       </ul>
     </div>
+    <h2>Skills Graph</h2>
+<div class="mermaid">
+  graph TD
+    Me[Guilherme Saboia]
+    Me --> FS[Full Stack]
+    Me --> AI[AI Engineer]
+    Me --> Auto[Automation]
+    Me --> BC[Blockchain]
+    Me --> Proj[Projects]
+    Me --> Tools[Collaboration & Tools]
+    Me --> Edu[Education]
+    Me --> Langs[Languages]
+
+    FS --> FE[Frontend: React, TypeScript, Next.js]
+    FS --> BE[Backend: Node.js, SQL, APIs]
+    FS --> DevOps[Cloudflare Workers, GitHub Actions]
+
+    AI --> ToolsAI[LLM Tools: LangChain, CrewAI]
+    AI --> Infra[AI Infra: MCP, Agents]
+    AI --> ML[ML: PyTorch, Optimization]
+
+    Auto --> Puppeteer
+    Auto --> n8n
+
+    BC --> Web3[Web3.js]
+    BC --> DeFi[Smart Contracts, Arbitrum]
+
+    Proj --> News[news.fasttakeoff.org]
+    Proj --> Transcriber[Video Transcriber]
+    Proj --> SnakeAI[Snake AI]
+    Proj --> Prompt[Prompt Caching]
+    Proj --> CS50[CS50 AI Projects]
+
+    Tools --> Git
+    Tools --> Figma
+    Tools --> ClickUp
+
+    Edu --> USP[USP Economics]
+    Edu --> Trybe[Trybe Full Stack]
+    Edu --> CS50[Harvard CS50 AI]
+    Edu --> Stanford[Stanford ML]
+
+    Langs --> PT[Portuguese]
+    Langs --> EN[English]
+    Langs --> ES[Spanish]
+    Langs --> IT[Italian]
+</div>
   </body>
 </html>
