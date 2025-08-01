@@ -56,9 +56,87 @@ ul {
 }
 
 .mermaid {
-  margin: 40px auto;
-  background-color: #fdfdfd;
-  border-radius: 6px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgba(52, 152, 219, 0.1);
+  overflow-x: auto;
 }
+
+.legend {
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.legend h3 {
+  margin-top: 0;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.legend-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid #333;
+}
+
+.legend-color.frontend {
+  background-color: #e74c3c;
+}
+
+.legend-color.backend {
+  background-color: #3498db;
+}
+
+.legend-color.ai {
+  background-color: #9b59b6;
+}
+
+.legend-color.devops {
+  background-color: #f39c12;
+}
+
+.legend-color.blockchain {
+  background-color: #1abc9c;
+}
+
+.legend-color.experience {
+  background-color: #34495e;
+}
+
+.legend-color.education {
+  background-color: #27ae60;
+}
+
+.legend-text {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
