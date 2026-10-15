@@ -4,229 +4,338 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guilherme Saboia - CV</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=VT323&family=Courier+Prime:wght@400;700&display=swap"
+    />
+    <link id="cv-css" rel="stylesheet" href="styles.css" />
+    <link id="art-css" rel="stylesheet" href="art.css" media="not all" />
+    <script>
+      try {
+        if (localStorage.getItem("view") === "art") {
+          document.getElementById("cv-css").media = "not all";
+          document.getElementById("art-css").media = "all";
+          document.documentElement.classList.add("art");
+        }
+      } catch (e) {}
+    </script>
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <div class="cv-container">
-      <h1>Guilherme Saboia</h1>
-      <div class="contact-info">
-        São Paulo, Brazil<br />
-        +55 (11) 99274-5950 | gsaboia@yahoo.com<br />
-        <a href="https://www.linkedin.com/in/guilherme-saboia/">LinkedIn</a> |
-        <a href="https://fasttakeoff.org">Portfolio</a> |
-        <a href="https://github.com/ghsaboias">GitHub</a>
-      </div>
+    <button
+      type="button"
+      class="art-toggle"
+      id="art-toggle"
+      role="switch"
+      aria-checked="false"
+    >
+      Art <span class="switch" aria-hidden="true"></span>
+    </button>
 
-      <p>
-        Software Engineer, 4.5 years. For the past 2 years I've written most of
-        my code in dialogue with AI. Co-founding a news platform now. Previously
-        frontend for $51M+ DeFi platform. Next.js, TypeScript, Python.
-      </p>
+    <div class="room art-only" aria-hidden="true">
+      <div class="window"><div class="rain"></div></div>
+      <div class="desk"></div>
+    </div>
 
-      <h2>Skills</h2>
-      <ul>
-        <li>
-          <strong>Languages:</strong> TypeScript, JavaScript, Python, Bash, SQL,
-          HTML, CSS
-        </li>
-        <li>
-          <strong>Frameworks:</strong> Next.js, React, Node.js, Hono, Vite
-        </li>
-        <li>
-          <strong>Deployment:</strong> Cloudflare Workers, Vercel, Supabase,
-          GitHub Actions
-        </li>
-        <li><strong>Tools:</strong> Git, Claude Code, Codex</li>
-      </ul>
+    <header class="top art-only">
+      <a class="wordmark" href="#about">Guilherme Saboia</a>
+      <nav aria-label="Sections">
+        <a href="#about" data-ch="1">About</a>
+        <a href="#work" data-ch="2">Work</a>
+        <a href="#projects" data-ch="3">Projects</a>
+        <a href="#school" data-ch="4">School</a>
+        <a href="#online" data-ch="5">Online</a>
+      </nav>
+    </header>
 
-      <h2>Professional Experience</h2>
-      <div>
-        <p class="job-title">Co-founder</p>
-        <p class="company">AI News Platform (Stealth) | 2025 – Present</p>
-        <ul>
-          <li>
-            Building AI-powered news platform with a partner. Automated RSS
-            ingestion, AI classification, entity extraction, Wiki-style topic
-            pages, curated newsletters, admin curation tools.
-          </li>
-          <li>
-            Stack: Next.js 15, Supabase, OpenRouter (Gemini 2.5 Flash), Vercel
-          </li>
-        </ul>
-      </div>
+    <main class="set">
+      <div class="crt">
+        <div class="bezel-top art-only">
+          <span class="brand">SABOIA</span>
+          <span class="model">Telestar</span>
+        </div>
 
-      <div>
-        <p class="job-title">Founder</p>
-        <p class="company">
-          <a href="https://news.fasttakeoff.org">Fast Takeoff</a> (Remote) |
-          2024 – 2025
-        </p>
-        <ul>
-          <li>
-            Built news.fasttakeoff.org — real-time news platform. Aggregates
-            from X, Telegram, on-the-ground sources via Discord; generates AI
-            reports.
-          </li>
-          <li>
-            Features:
-            <a href="https://my-game.gsaboia.workers.dev/">3D news globe</a>,
-            executive orders tracker, power network (political/business
-            relationships), automated social posting
-          </li>
-          <li>
-            Stack: Next.js, Cloudflare Workers, Gemini via OpenRouter, Clerk,
-            Stripe
-          </li>
-        </ul>
-      </div>
+        <div class="screen" id="screen">
+          <div class="osd art-only">
+            <span><span class="play">▶</span> <span id="osd-label">PLAY</span></span>
+            <span id="osd-ch">CH 01</span>
+          </div>
 
-      <div>
-        <p class="job-title">Frontend Developer</p>
-        <p class="company">
-          DeFi Platform on Arbitrum (Remote) | Jan 2022 – Oct 2023
-        </p>
-        <ul>
-          <li>
-            Built UI for lending/borrowing and trading interfaces across two
-            platforms ($51M+ trading volume)
-          </li>
-          <li>
-            Tight feedback loops: BugHerd for bug tracking, direct user input
-            driving iteration
-          </li>
-          <li>Remote team across timezones, async via Discord and GitHub</li>
-          <li>Stack: TypeScript, React, shadcn/ui, Web3.js</li>
-        </ul>
-      </div>
+          <div class="tube" id="tube">
+            <div class="cv-container">
+              <section id="about" data-ch="1" data-label="ABOUT">
+                <h1>Guilherme Saboia</h1>
+              </section>
 
-      <div>
-        <p class="job-title">Consultant</p>
-        <p class="company">Consulting Firm | Nov 2020 – May 2021</p>
-        <ul>
-          <li>
-            Digital signing project for a major bank: mapped existing document
-            pipelines across areas, designed the new flow through stakeholder
-            interviews
-          </li>
-        </ul>
-      </div>
+              <section id="online" data-ch="5" data-label="ONLINE">
+                <div class="contact-info">
+                  São Paulo, Brazil<br />
+                  +55 (11) 99274-5950 | gsaboia@yahoo.com<br />
+                  <a href="https://www.linkedin.com/in/guilherme-saboia/">LinkedIn</a> |
+                  <a href="https://fasttakeoff.org">Portfolio</a> |
+                  <a href="https://github.com/ghsaboias">GitHub</a>
+                </div>
+              </section>
 
-      <div class="education">
-        <h2>Education</h2>
-        <div>
-          <p>
-            <strong>Bachelor of Economics</strong><br />
-            Universidade de São Paulo (FEA-USP) | 2016 - 2020
-          </p>
-          <p>
-            <strong>Exchange Program</strong><br />
-            Universidad de Zaragoza, Spain | Sep 2019 - Jan 2020
-          </p>
+              <section data-ch="1">
+                <p>
+                  Software Engineer, 4.5 years. For the past 2 years I've written most of
+                  my code in dialogue with AI. Co-founding a news platform now. Previously
+                  frontend for $51M+ DeFi platform. Next.js, TypeScript, Python.
+                </p>
+
+                <h2>Skills</h2>
+                <ul>
+                  <li>
+                    <strong>Languages:</strong> TypeScript, JavaScript, Python, Bash, SQL,
+                    HTML, CSS
+                  </li>
+                  <li>
+                    <strong>Frameworks:</strong> Next.js, React, Node.js, Hono, Vite
+                  </li>
+                  <li>
+                    <strong>Deployment:</strong> Cloudflare Workers, Vercel, Supabase,
+                    GitHub Actions
+                  </li>
+                  <li><strong>Tools:</strong> Git, Claude Code, Codex</li>
+                </ul>
+              </section>
+
+              <section id="work" data-ch="2" data-label="WORK">
+                <h2>Professional Experience</h2>
+                <div class="job" id="job-news">
+                  <p class="job-title">Co-founder</p>
+                  <p class="company">AI News Platform (Stealth) | 2025 – Present</p>
+                  <ul>
+                    <li>
+                      Building AI-powered news platform with a partner. Automated RSS
+                      ingestion, AI classification, entity extraction, Wiki-style topic
+                      pages, curated newsletters, admin curation tools.
+                    </li>
+                    <li>
+                      Stack: Next.js 15, Supabase, OpenRouter (Gemini 2.5 Flash), Vercel
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="job" id="job-fasttakeoff">
+                  <p class="job-title">Founder</p>
+                  <p class="company">
+                    <a href="https://news.fasttakeoff.org">Fast Takeoff</a> (Remote) |
+                    2024 – 2025
+                  </p>
+                  <ul>
+                    <li>
+                      Built news.fasttakeoff.org — real-time news platform. Aggregates
+                      from X, Telegram, on-the-ground sources via Discord; generates AI
+                      reports.
+                    </li>
+                    <li>
+                      Features:
+                      <a href="https://my-game.gsaboia.workers.dev/">3D news globe</a>,
+                      executive orders tracker, power network (political/business
+                      relationships), automated social posting
+                    </li>
+                    <li>
+                      Stack: Next.js, Cloudflare Workers, Gemini via OpenRouter, Clerk,
+                      Stripe
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="job" id="job-defi">
+                  <p class="job-title">Frontend Developer</p>
+                  <p class="company">
+                    DeFi Platform on Arbitrum (Remote) | Jan 2022 – Oct 2023
+                  </p>
+                  <ul>
+                    <li>
+                      Built UI for lending/borrowing and trading interfaces across two
+                      platforms ($51M+ trading volume)
+                    </li>
+                    <li>
+                      Tight feedback loops: BugHerd for bug tracking, direct user input
+                      driving iteration
+                    </li>
+                    <li>Remote team across timezones, async via Discord and GitHub</li>
+                    <li>Stack: TypeScript, React, shadcn/ui, Web3.js</li>
+                  </ul>
+                </div>
+
+                <div class="job" id="job-consulting">
+                  <p class="job-title">Consultant</p>
+                  <p class="company">Consulting Firm | Nov 2020 – May 2021</p>
+                  <ul>
+                    <li>
+                      Digital signing project for a major bank: mapped existing document
+                      pipelines across areas, designed the new flow through stakeholder
+                      interviews
+                    </li>
+                  </ul>
+                </div>
+              </section>
+
+              <section id="school" data-ch="4" data-label="SCHOOL">
+                <div class="education job" id="edu">
+                  <h2>Education</h2>
+                  <div>
+                    <p>
+                      <strong>Bachelor of Economics</strong><br />
+                      Universidade de São Paulo (FEA-USP) | 2016 - 2020
+                    </p>
+                    <p>
+                      <strong>Exchange Program</strong><br />
+                      Universidad de Zaragoza, Spain | Sep 2019 - Jan 2020
+                    </p>
+                  </div>
+                </div>
+
+                <h2>Professional Development</h2>
+                <p>
+                  <strong
+                    ><a href="https://github.com/ghsaboias/ai-research"
+                      >CS50's Introduction to AI</a
+                    ></strong
+                  >
+                  (Harvard/edX, 2024): Search, knowledge representation, optimization,
+                  neural networks, NLP. Projects: degrees of separation, tictactoe AI,
+                  minesweeper, knights puzzle.
+                </p>
+                <p>
+                  <strong
+                    ><a href="https://github.com/ghsaboias/trybe"
+                      >Full Stack Web Programming</a
+                    ></strong
+                  >
+                  (Trybe, 2021–2022): 1,500-hour bootcamp. React, Redux, Node.js, Express,
+                  SQL, MongoDB, Python, algorithms, data structures.
+                </p>
+                <p>
+                  <strong>Machine Learning</strong> (Stanford/Coursera, 2020): Andrew Ng's
+                  original course. Linear/logistic regression, neural networks, SVM,
+                  k-means, PCA, recommender systems.
+                </p>
+
+                <h2>Languages</h2>
+                <ul>
+                  <li>Portuguese (native)</li>
+                  <li>English (fluent; daily professional use)</li>
+                  <li>Spanish (intermediate)</li>
+                  <li>Italian (intermediate)</li>
+                </ul>
+              </section>
+
+              <section id="projects" data-ch="3" data-label="PROJECTS">
+                <h2>Notable Projects</h2>
+                <ul>
+                  <li>
+                    <strong>Telegram Bot</strong> — Claude Code via Telegram on Raspberry
+                    Pi. Voice transcription (Groq Whisper), session management, zero-SSH
+                    server management. Python, Flask, Cloudflare Tunnel.
+                  </li>
+                  <li>
+                    <strong>Semantic Search Tools</strong> — Personal knowledge
+                    infrastructure. bsearch (Twitter bookmarks), vsearch (Obsidian vault),
+                    tsearch (browser tabs). Embeddings + vector search.
+                  </li>
+                  <li>
+                    <strong
+                      ><a href="https://github.com/ghsaboias/flashcards"
+                        >Flashcards</a
+                      ></strong
+                    >
+                    — SM-2 spaced repetition app. Country decks (capitals, flags,
+                    currencies). Cloudflare Workers + D1.
+                  </li>
+                  <li>
+                    <strong>Polymarket SDK</strong> — Python SDK for prediction markets.
+                    32 functions, WebSocket, historical data snapshots, 100% test
+                    coverage.
+                  </li>
+                  <li>
+                    <strong
+                      ><a href="https://github.com/ghsaboias/video-transcriber"
+                        >Video Transcriber</a
+                      ></strong
+                    >
+                    — Live video transcription + AI summarization. Chunks audio for
+                    real-time processing, OpenRouter for model selection.
+                  </li>
+                  <li>
+                    <strong
+                      ><a href="https://github.com/ghsaboias/ai-infra">AI Infra</a></strong
+                    >
+                    — AI infrastructure intelligence: training clusters, chips, power,
+                    interconnects. 36-month forecasts.
+                  </li>
+                  <li>
+                    <strong>Karpathy Tutorials</strong> —
+                    <a href="https://github.com/ghsaboias/karpathy_micrograd">MicroGrad</a
+                    >,
+                    <a href="https://github.com/ghsaboias/karpathy_makemore">MakeMore</a>.
+                    Neural network implementations from scratch.
+                  </li>
+                  <li>
+                    <strong
+                      ><a href="https://my-game-desert.gsaboia.workers.dev/"
+                        >Desert Driving</a
+                      ></strong
+                    >
+                    — Three.js + Rapier physics sandbox. Destructible objects, terrain
+                    editing, V8 engine sound synthesis. No build step.
+                  </li>
+                </ul>
+              </section>
+
+              <section data-ch="1">
+                <h2>Books & Learning</h2>
+                <ul>
+                  <li>
+                    Life 3.0 (Max Tegmark), Superintelligence (Nick Bostrom), Rationality
+                    from A to Z (Yudkowsky), Incerto series (Nassim Taleb)
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <div class="bezel-bottom art-only">
+          <span class="led" aria-hidden="true"></span>
+          <div class="buttons" role="group" aria-label="Channels">
+            <button type="button" data-ch="1" aria-label="About">1</button>
+            <button type="button" data-ch="2" aria-label="Work">2</button>
+            <button type="button" data-ch="3" aria-label="Projects">3</button>
+            <button type="button" data-ch="4" aria-label="School">4</button>
+            <button type="button" data-ch="5" aria-label="Online">5</button>
+          </div>
+          <span class="knobs" aria-hidden="true"><i></i><i></i></span>
         </div>
       </div>
 
-      <h2>Professional Development</h2>
-      <p>
-        <strong
-          ><a href="https://github.com/ghsaboias/ai-research"
-            >CS50's Introduction to AI</a
-          ></strong
-        >
-        (Harvard/edX, 2024): Search, knowledge representation, optimization,
-        neural networks, NLP. Projects: degrees of separation, tictactoe AI,
-        minesweeper, knights puzzle.
-      </p>
-      <p>
-        <strong
-          ><a href="https://github.com/ghsaboias/trybe"
-            >Full Stack Web Programming</a
-          ></strong
-        >
-        (Trybe, 2021–2022): 1,500-hour bootcamp. React, Redux, Node.js, Express,
-        SQL, MongoDB, Python, algorithms, data structures.
-      </p>
-      <p>
-        <strong>Machine Learning</strong> (Stanford/Coursera, 2020): Andrew Ng's
-        original course. Linear/logistic regression, neural networks, SVM,
-        k-means, PCA, recommender systems.
-      </p>
+      <div class="tapes art-only" role="group" aria-label="Tapes">
+        <button type="button" class="tape t1" data-tape="job-news">
+          <span class="label">AI News</span><span class="yr">2025–now</span>
+        </button>
+        <button type="button" class="tape t2" data-tape="job-fasttakeoff">
+          <span class="label">Fast Takeoff</span><span class="yr">2024–25</span>
+        </button>
+        <button type="button" class="tape t3" data-tape="job-defi">
+          <span class="label">DeFi · Arbitrum</span><span class="yr">2022–23</span>
+        </button>
+        <button type="button" class="tape t4" data-tape="job-consulting">
+          <span class="label">Consulting</span><span class="yr">2020–21</span>
+        </button>
+        <button type="button" class="tape t5" data-tape="edu">
+          <span class="label">FEA-USP</span><span class="yr">2016–20</span>
+        </button>
+      </div>
+    </main>
 
-      <h2>Languages</h2>
-      <ul>
-        <li>Portuguese (native)</li>
-        <li>English (fluent; daily professional use)</li>
-        <li>Spanish (intermediate)</li>
-        <li>Italian (intermediate)</li>
-      </ul>
+    <p class="hint art-only">1–5 change channel · ← → flip · click a tape to play it</p>
 
-      <h2>Notable Projects</h2>
-      <ul>
-        <li>
-          <strong>Telegram Bot</strong> — Claude Code via Telegram on Raspberry
-          Pi. Voice transcription (Groq Whisper), session management, zero-SSH
-          server management. Python, Flask, Cloudflare Tunnel.
-        </li>
-        <li>
-          <strong>Semantic Search Tools</strong> — Personal knowledge
-          infrastructure. bsearch (Twitter bookmarks), vsearch (Obsidian vault),
-          tsearch (browser tabs). Embeddings + vector search.
-        </li>
-        <li>
-          <strong
-            ><a href="https://github.com/ghsaboias/flashcards"
-              >Flashcards</a
-            ></strong
-          >
-          — SM-2 spaced repetition app. Country decks (capitals, flags,
-          currencies). Cloudflare Workers + D1.
-        </li>
-        <li>
-          <strong>Polymarket SDK</strong> — Python SDK for prediction markets.
-          32 functions, WebSocket, historical data snapshots, 100% test
-          coverage.
-        </li>
-        <li>
-          <strong
-            ><a href="https://github.com/ghsaboias/video-transcriber"
-              >Video Transcriber</a
-            ></strong
-          >
-          — Live video transcription + AI summarization. Chunks audio for
-          real-time processing, OpenRouter for model selection.
-        </li>
-        <li>
-          <strong
-            ><a href="https://github.com/ghsaboias/ai-infra">AI Infra</a></strong
-          >
-          — AI infrastructure intelligence: training clusters, chips, power,
-          interconnects. 36-month forecasts.
-        </li>
-        <li>
-          <strong>Karpathy Tutorials</strong> —
-          <a href="https://github.com/ghsaboias/karpathy_micrograd">MicroGrad</a
-          >,
-          <a href="https://github.com/ghsaboias/karpathy_makemore">MakeMore</a>.
-          Neural network implementations from scratch.
-        </li>
-        <li>
-          <strong
-            ><a href="https://my-game-desert.gsaboia.workers.dev/"
-              >Desert Driving</a
-            ></strong
-          >
-          — Three.js + Rapier physics sandbox. Destructible objects, terrain
-          editing, V8 engine sound synthesis. No build step.
-        </li>
-      </ul>
-
-      <h2>Books & Learning</h2>
-      <ul>
-        <li>
-          Life 3.0 (Max Tegmark), Superintelligence (Nick Bostrom), Rationality
-          from A to Z (Yudkowsky), Incerto series (Nassim Taleb)
-        </li>
-      </ul>
-    </div>
+    <script src="app.js"></script>
   </body>
 </html>
